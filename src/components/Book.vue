@@ -6,29 +6,37 @@
       <div class="description-overlay"></div>
       <div class="author-overlay"></div>
       <div class="subtitle-overlay"></div>
-      <div class="title">ガロア理論</div>
+      <div class="title">{{ bookDetails.title }}</div>
       <div class="description-1">
-        一歩一歩階段を上るように、<br />
-        わかっていく楽しみを味わえる
+        {{ bookDetails.description1 }}<br />
+        {{ bookDetails.description2 }}
       </div>
       <div class="description-2">
-        ガロア理論への<br />
-        格好の入門書。
+        {{ bookDetails.description3 }}<br />
+        {{ bookDetails.description4 }}
       </div>
       <div class="author">
         <div class="author-jp">
-          鈴木智秀
+          {{ bookDetails.author }}
         </div>
         <div class="author-en">
-          Tomohide Suzuki
+          {{ bookDetails.authorEn }}
         </div>
       </div>
       <div class="subtitle">
-        図解<span class="small">と</span>実例<span class="small">と</span>論理<span class="small">で</span>、今度こそわかる
+        {{ bookDetails.subtitle1 }}<span class="small">と</span>{{ bookDetails.subtitle2 }}<span class="small">と</span>{{ bookDetails.subtitle3 }}<span class="small">で、</span>{{ bookDetails.subtitle4 }}
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    bookDetails: Object
+  }
+}
+</script>
 
 <style scoped>
 @font-face {
@@ -41,6 +49,8 @@ img {
 .book {
   position: relative;
   height: 100vh;
+  float: left;
+  margin-right: 10px;
 }
 .overlay {
   position: absolute;
