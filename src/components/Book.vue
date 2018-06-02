@@ -44,20 +44,29 @@ export default {
   src: url('../assets/GenJyuuGothic-Normal.ttf');
 }
 img {
+  width: 100%;
   height: 100%;
 }
 .book {
   position: relative;
-  height: 100vh;
-  float: left;
-  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 100vw;
+  height: calc(100vw / 690 * 1000);
+}
+@media screen and (min-width: 600px) {
+  .book {
+    width: calc(100vh / 1000 * 690);
+    height: 100vh;
+    float: left;
+    margin-right: 10px;
+  }
 }
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   font-family: genjyuu;
-  width: calc(100vh / 1000 * 690);
+  width: 100%;
   height: 100%;
 }
 .overlay > * {
