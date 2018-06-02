@@ -1,9 +1,7 @@
-<template>
-  <div class="title">
-    <v-toolbar color="primary">
-      <v-toolbar-title>ガロア理論ジェネレーター</v-toolbar-title>
-    </v-toolbar>
-  </div>
+<template lang="pug">
+  .title
+    v-toolbar(color="primary")
+      v-toolbar-title ガロア理論ジェネレーター
 </template>
 
 <style scoped>

@@ -6,13 +6,13 @@ import Vuetify from 'vuetify'
 
 Vue.use(Vuetify, {
   theme: {
-    primary: "#2196F3",
-    secondary: "#1976D2",
-    accent: "#9c27b0",
-    error: "#f44336",
-    warning: "#ffeb3b",
-    info: "#2196f3",
-    success: "#4caf50"
+    primary: '#2196F3',
+    secondary: '#1976D2',
+    accent: '#9c27b0',
+    error: '#f44336',
+    warning: '#ffeb3b',
+    info: '#2196f3',
+    success: '#4caf50'
   }
 })
 

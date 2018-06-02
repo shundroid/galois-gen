@@ -1,33 +1,23 @@
-<template>
-  <div class="book">
-    <img src="../assets/book.jpg">
-    <div class="overlay">
-      <div class="title-overlay"></div>
-      <div class="description-overlay"></div>
-      <div class="author-overlay"></div>
-      <div class="subtitle-overlay"></div>
-      <div class="b-title">{{ bookDetails.title }}</div>
-      <div class="description-1">
-        {{ bookDetails.description1 }}<br />
-        {{ bookDetails.description2 }}
-      </div>
-      <div class="description-2">
-        {{ bookDetails.description3 }}<br />
-        {{ bookDetails.description4 }}
-      </div>
-      <div class="author">
-        <div class="author-jp">
-          {{ bookDetails.author }}
-        </div>
-        <div class="author-en">
-          {{ bookDetails.authorEn }}
-        </div>
-      </div>
-      <div class="subtitle">
-        {{ bookDetails.subtitle1 }}<span class="small">と</span>{{ bookDetails.subtitle2 }}<span class="small">と</span>{{ bookDetails.subtitle3 }}<span class="small">で、</span>{{ bookDetails.subtitle4 }}
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+  .book
+    img(src="../assets/book.jpg")
+    .overlay
+      .title-overlay
+      .description-overlay
+      .author-overlay
+      .subtitle-overlay
+      .b-title {{ bookDetails.title }}
+      .description-1
+        | {{ bookDetails.description1 }}#[br]{{ bookDetails.description2 }}
+      .description-2
+        | {{ bookDetails.description3 }}#[br]{{ bookDetails.description4 }}
+      .author
+        .author-jp
+          | {{ bookDetails.author }}
+        .author-en
+          | {{ bookDetails.authorEn }}
+      .subtitle
+        | {{ bookDetails.subtitle1 }}#[span.small と]{{ bookDetails.subtitle2 }}#[span.small と]{{ bookDetails.subtitle3 }}#[span.small で、]{{ bookDetails.subtitle4 }}
 </template>
 
 <script>
