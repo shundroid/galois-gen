@@ -1,5 +1,5 @@
 <template lang="pug">
-  .book
+  #book
     img(src="../assets/book.jpg")
     .overlay
       .title-overlay
@@ -12,8 +12,7 @@
       .description-2
         | {{ bookDetails.description3 }}#[br]{{ bookDetails.description4 }}
       .author
-        .author-jp
-          | {{ bookDetails.author }}
+        .author-jp(v-html="authorRendered")
         .author-en
           | {{ bookDetails.authorEn }}
       .subtitle
@@ -24,6 +23,11 @@
 export default {
   props: {
     bookDetails: Object
+  },
+  computed: {
+    authorRendered () {
+      return this.bookDetails.author.split('').join('<br />')
+    }
   }
 }
 </script>
@@ -37,7 +41,7 @@ img {
   width: 100%;
   height: 100%;
 }
-.book {
+#book {
   margin-bottom: 10px;
   width: 100vw;
   height: calc(100vw / 690 * 1000);
@@ -46,7 +50,7 @@ img {
   font-size: calc(1vw / 690 * 1000);
 }
 @media screen and (min-width: 700px) {
-  .book {
+  #book {
     width: calc(100vh / 1000 * 690);
     height: 100vh;
     margin-right: 10px;
@@ -115,20 +119,22 @@ img {
   letter-spacing: -0.05em;
 }
 .author {
-  top: 6%;
-  left: 83%;
+  top: 5.5%;
+  left: 86%;
 }
 .author-jp {
-  writing-mode: vertical-rl;
   font-size: 3.7em;
+  line-height: 1.1em;
   color: #313630;
 }
 .author-en {
-  writing-mode: vertical-rl;
+  transform: rotate(90deg);
+  transform-origin: left center;
+  white-space: nowrap;
   font-size: 1.6em;
-  margin-left: 1.2em;
-  margin-top: 1em;
   color: #2191d9;
+  margin-top: -0.4em;
+  margin-left: 1.25em;
 }
 .subtitle {
   top: 43.5%;

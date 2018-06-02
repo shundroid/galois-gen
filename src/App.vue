@@ -7,13 +7,15 @@
       | ！
     main
       book(:bookDetails="bookDetails")
-      inspector(:bookDetails="bookDetails")
+      inspector(:bookDetails="bookDetails", :makeImage="makeImage")
 </template>
 
 <script>
 import GTitle from './components/Title'
 import Book from './components/Book'
 import Inspector from './components/Inspector'
+import makeImage from './util/makeImage'
+import downloader from './util/downloader'
 
 export default {
   name: 'App',
@@ -37,6 +39,13 @@ export default {
         description3: 'ガロア理論への',
         description4: '格好の入門書。'
       }
+    }
+  },
+  methods: {
+    makeImage () {
+      makeImage().then(dataUrl => {
+        downloader(dataUrl)
+      })
     }
   }
 }

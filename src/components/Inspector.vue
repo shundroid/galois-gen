@@ -3,6 +3,8 @@
     v-card-title(primary-title)
       div
         h3.headline.mb-0 設定
+        br
+        v-btn(color="success" @click.native="makeImage") #[v-icon vertical_align_bottom]
         v-layout(row)
           v-flex(xs4) #[v-subheader タイトル]
           v-flex(xs4)
@@ -49,7 +51,8 @@
 <script>
 export default {
   props: {
-    bookDetails: Object
+    bookDetails: Object,
+    makeImage: Function
   }
 }
 </script>
