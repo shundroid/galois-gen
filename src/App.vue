@@ -1,6 +1,9 @@
 <template>
   <v-app id="app">
     <g-title />
+    <div class="buy">
+      購入は<a href="https://www.amazon.co.jp/%E5%9B%B3%E8%A7%A3%E3%81%A8%E5%AE%9F%E4%BE%8B%E3%81%A8%E8%AB%96%E7%90%86%E3%81%A7%E3%80%81%E4%BB%8A%E5%BA%A6%E3%81%93%E3%81%9D%E3%82%8F%E3%81%8B%E3%82%8B%E3%82%AC%E3%83%AD%E3%82%A2%E7%90%86%E8%AB%96-%E9%88%B4%E6%9C%A8-%E6%99%BA%E7%A7%80/dp/4797390204" target="_blank">こちら</a>！
+    </div>
     <main>
       <book :bookDetails="bookDetails" />
       <inspector :bookDetails="bookDetails" />
@@ -43,6 +46,10 @@ export default {
 <style>
 html, body {
   margin: 0;
+}
+
+.buy {
+  width: 100%;
 }
 
 .md-primary {
