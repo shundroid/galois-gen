@@ -57,7 +57,7 @@ html, body {
   color: white;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   main {
     display: flex;
   }

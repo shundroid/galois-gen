@@ -53,12 +53,14 @@ img {
   height: calc(100vw / 690 * 1000);
   line-height: normal;
   position: relative;
+  font-size: calc(1vw / 690 * 1000);
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   .book {
     width: calc(100vh / 1000 * 690);
     height: 100vh;
     margin-right: 10px;
+    font-size: 1vh;
   }
 }
 .overlay {
@@ -77,7 +79,7 @@ img {
   width: 100%;
   text-align: center;
   color: #d7e6ec;
-  font-size: 13vh;
+  font-size: 13em;
 }
 .title-overlay {
   background-color: #2191d9;
@@ -110,7 +112,7 @@ img {
   color: #012942;
   font-weight: bold;
   line-height: 1.4;
-  font-size: 2.4vh;
+  font-size: 2.4em;
   letter-spacing: -0.05em;
 }
 .description-2 {
@@ -119,7 +121,7 @@ img {
   color: #012942;
   font-weight: bold;
   line-height: 1.4;
-  font-size: 3.9vh;
+  font-size: 3.9em;
   letter-spacing: -0.05em;
 }
 .author {
@@ -128,24 +130,24 @@ img {
 }
 .author-jp {
   writing-mode: vertical-rl;
-  font-size: 3.7vh;
+  font-size: 3.7em;
   color: #313630;
 }
 .author-en {
   writing-mode: vertical-rl;
-  font-size: 1.6vh;
-  margin-left: 2vh;
-  margin-top: 1vh;
+  font-size: 1.6em;
+  margin-left: 1.2em;
+  margin-top: 1em;
   color: #2191d9;
 }
 .subtitle {
   top: 43.5%;
   width: 100%;
   letter-spacing: -0.05em;
-  font-size: 4.2vh;
+  font-size: 4.2em;
   text-align: center;
 }
 .small {
-  font-size: 3vh;
+  font-size: 0.71em;
 }
 </style>
