@@ -38,6 +38,7 @@ export default {
         description2: 'わかっていく楽しみを味わえる',
         description3: 'ガロア理論への',
         description4: '格好の入門書。',
+        titleFontSize: 50,
         subtitleFontSize: 50
       }
     }

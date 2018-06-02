@@ -6,7 +6,7 @@
       .description-overlay
       .author-overlay
       .subtitle-overlay
-      .b-title {{ bookDetails.title }}
+      .b-title(:style="{ fontSize: titleFontSize }") {{ bookDetails.title }}
       .description-1
         | {{ bookDetails.description1 }}#[br]{{ bookDetails.description2 }}
       .description-2
@@ -15,7 +15,7 @@
         .author-jp(v-html="authorRendered")
         .author-en
           | {{ bookDetails.authorEn }}
-      .subtitle(:style="{ fontSize }")
+      .subtitle(:style="{ fontSize: subtitleFontSize }")
         | {{ bookDetails.subtitle1 }}#[span.small と]{{ bookDetails.subtitle2 }}#[span.small と]{{ bookDetails.subtitle3 }}#[span.small で、]{{ bookDetails.subtitle4 }}
 </template>
 
@@ -28,7 +28,10 @@ export default {
     authorRendered () {
       return this.bookDetails.author.split('').join('<br />')
     },
-    fontSize () {
+    titleFontSize () {
+      return `${13 * this.bookDetails.titleFontSize / 50}em`
+    },
+    subtitleFontSize () {
       return `${4.2 * this.bookDetails.subtitleFontSize / 50}em`
     }
   }
