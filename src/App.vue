@@ -17,7 +17,6 @@ import Book from './components/Book'
 import ExportDialog from './components/ExportDialog'
 import Inspector from './components/Inspector'
 import makeImage from './util/makeImage'
-import downloader from './util/downloader'
 
 export default {
   name: 'App',
@@ -63,6 +62,7 @@ export default {
 <style>
 html, body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 .buy {
