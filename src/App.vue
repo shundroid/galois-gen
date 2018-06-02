@@ -8,11 +8,13 @@
     main
       book(:bookDetails="bookDetails")
       inspector(:bookDetails="bookDetails", :makeImage="makeImage")
+      export-dialog(:show="isShowExportDialog" :imageUrl="imageUrl")
 </template>
 
 <script>
 import GTitle from './components/Title'
 import Book from './components/Book'
+import ExportDialog from './components/ExportDialog'
 import Inspector from './components/Inspector'
 import makeImage from './util/makeImage'
 import downloader from './util/downloader'
@@ -22,10 +24,13 @@ export default {
   components: {
     GTitle,
     Book,
-    Inspector
+    Inspector,
+    ExportDialog
   },
   data () {
     return {
+      isShowExportDialog: false,
+      imageUrl: '',
       bookDetails: {
         author: '鈴木智秀',
         authorEn: 'Tomohide Suzuki',
@@ -46,8 +51,10 @@ export default {
   methods: {
     makeImage () {
       makeImage().then(dataUrl => {
-        downloader(dataUrl)
+        this.imageUrl = dataUrl
       })
+      this.imageUrl = ''
+      this.isShowExportDialog = true
     }
   }
 }
