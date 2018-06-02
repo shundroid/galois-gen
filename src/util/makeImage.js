@@ -4,9 +4,9 @@ export default function makeImage () {
   return new Promise(resolve => {
     html2canvas(document.getElementById('book')).then(canvas => {
       canvas.toBlob(blob => {
-        let url = URL.createObjectURL(blob);
+        const url = URL.createObjectURL(blob)
         resolve(url)
-      });
+      })
     })
   })
 }

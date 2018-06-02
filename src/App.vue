@@ -37,7 +37,8 @@ export default {
         description1: '１歩１歩階段を上るように、',
         description2: 'わかっていく楽しみを味わえる',
         description3: 'ガロア理論への',
-        description4: '格好の入門書。'
+        description4: '格好の入門書。',
+        subtitleFontSize: 50
       }
     }
   },

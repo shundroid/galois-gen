@@ -15,7 +15,7 @@
         .author-jp(v-html="authorRendered")
         .author-en
           | {{ bookDetails.authorEn }}
-      .subtitle
+      .subtitle(:style="{ fontSize }")
         | {{ bookDetails.subtitle1 }}#[span.small と]{{ bookDetails.subtitle2 }}#[span.small と]{{ bookDetails.subtitle3 }}#[span.small で、]{{ bookDetails.subtitle4 }}
 </template>
 
@@ -27,6 +27,9 @@ export default {
   computed: {
     authorRendered () {
       return this.bookDetails.author.split('').join('<br />')
+    },
+    fontSize () {
+      return `${4.2 * this.bookDetails.subtitleFontSize / 50}em`
     }
   }
 }
@@ -137,7 +140,7 @@ img {
   margin-left: 1.25em;
 }
 .subtitle {
-  top: 43.5%;
+  bottom: 50%;
   width: 100%;
   letter-spacing: -0.05em;
   font-size: 4.2em;

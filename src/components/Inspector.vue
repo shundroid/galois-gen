@@ -23,6 +23,10 @@
           v-flex(xs4)
             v-text-field(v-model="bookDetails.subtitle4")
         v-layout(row)
+          v-flex(xs4) #[v-subheader サブタイトルのフォントサイズ]
+          v-flex(xs4)
+            v-slider(v-model="bookDetails.subtitleFontSize" step="1")
+        v-layout(row)
           v-flex(xs4) #[v-subheader 説明（１行目）]
           v-flex(xs4)
             v-text-field(v-model="bookDetails.description1")
