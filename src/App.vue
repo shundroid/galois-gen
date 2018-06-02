@@ -1,17 +1,22 @@
 <template>
-  <div id="app">
-    <book :bookDetails="bookDetails" />
-    <inspector :bookDetails="bookDetails" />
-  </div>
+  <v-app id="app">
+    <g-title />
+    <main>
+      <book :bookDetails="bookDetails" />
+      <inspector :bookDetails="bookDetails" />
+    </main>
+  </v-app>
 </template>
 
 <script>
+import GTitle from './components/Title'
 import Book from './components/Book'
 import Inspector from './components/Inspector'
 
 export default {
   name: 'App',
   components: {
+    GTitle,
     Book,
     Inspector
   },
@@ -38,5 +43,16 @@ export default {
 <style>
 html, body {
   margin: 0;
+}
+
+.md-primary {
+  background-color: #0062a1;
+  color: white;
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    display: flex;
+  }
 }
 </style>

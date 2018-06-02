@@ -6,7 +6,7 @@
       <div class="description-overlay"></div>
       <div class="author-overlay"></div>
       <div class="subtitle-overlay"></div>
-      <div class="title">{{ bookDetails.title }}</div>
+      <div class="b-title">{{ bookDetails.title }}</div>
       <div class="description-1">
         {{ bookDetails.description1 }}<br />
         {{ bookDetails.description2 }}
@@ -48,16 +48,16 @@ img {
   height: 100%;
 }
 .book {
-  position: relative;
   margin-bottom: 10px;
   width: 100vw;
   height: calc(100vw / 690 * 1000);
+  line-height: normal;
+  position: relative;
 }
 @media screen and (min-width: 600px) {
   .book {
     width: calc(100vh / 1000 * 690);
     height: 100vh;
-    float: left;
     margin-right: 10px;
   }
 }
@@ -72,7 +72,7 @@ img {
 .overlay > * {
   position: absolute;
 }
-.title {
+.b-title {
   top: 49%;
   width: 100%;
   text-align: center;
